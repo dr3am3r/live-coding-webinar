@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>FastShell by @_Karamii</title>
+    <title>Тотализатор</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -11,28 +11,46 @@
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="assets/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <script src="assets/components/modernizr/modernizr.js"></script>
   </head>
   <body>
 
     <header class="header" role="banner">
-      <div class="logo">
-        <a href="/">
-          <img src="assets/img/logo.png" alt="Logo">
-        </a>
-      </div>
-      <nav class="nav" role="navigation">
-        <ul>
-          <li>
-            <a href="/"></a>
-          </li>
-        </ul>
-      </nav>
+      <h1 class="text-center">ТОТАЛИЗАТОР ОНЛАЙН</h1>
+      <h5 class="text-center">делай ставки прямо из дома!</h5>
     </header>
 
     <main class="main" role="main">
-
+      <div class="countdown-container">
+        <h4 class="text-center">До начала матча осталось</h4>
+        <div id="match-countdown" class="text-center"></div>
+      </div>
+      <div class="prize-fund">
+        <h4 class="text-center">Призовой фонд</h4>
+        <h5 class="text-center"><i class="fa fa-diamond"></i><span id="sum"></span></h5>
+      </div>
+      <div class="container-fluid clubs-container">
+        <div class="row">
+          <div class="col-md-6 col-xs-12 club-container club-left text-center" data-club="Barcelona" title="Кликни чтобы поставить на Барселону!">
+            <div class="club-name">
+              FC Barcelona
+            </div>
+            <div class="club-logo club-logo-left">
+              <img src="/assets/img/fc_barcelona_logo.png">
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12 club-container club-right text-center" data-club="Real" title="Кликни чтобы поставить на Реал!">
+            <div class="club-name">
+              Real Madrid CF
+            </div>
+            <div class="club-logo club-logo-right">
+              <img src="/assets/img/real_madrid_logo.png">
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <aside class="sidebar" role="complementary">
@@ -44,7 +62,9 @@
     </footer>
 
     <script src="assets/components/jquery/jquery.min.js"></script>
-    <script src="assets/js/scripts.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <!--script src="assets/js/scripts.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script-->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

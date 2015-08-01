@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    concat = require('gulp-concat'),
     browserSync = require('browser-sync'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
@@ -35,10 +36,8 @@ gulp.task('css', function () {
 });
 
 gulp.task('js',function(){
-  gulp.src('src/js/scripts.js')
-    .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('default'))
-    .pipe(header(banner, { package : package }))
+  gulp.src(['src/js/plugins/*.js', 'src/js/scripts.js'])
+    .pipe(concat('all.js'))
     .pipe(gulp.dest('app/assets/js'))
     .pipe(uglify())
     .pipe(header(banner, { package : package }))
